@@ -1,0 +1,12 @@
+version: "3"
+services:
+  webapp:
+    build:
+      context: ./web-app
+      dockerfile: Dockerfile
+  postgresdb:
+    build:
+      context: ./postgresdb
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_ROOT_PASSWORD=supersecret

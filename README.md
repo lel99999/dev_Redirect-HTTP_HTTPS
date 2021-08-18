@@ -12,6 +12,7 @@ To redirect a website to HTTPS, use the Redirect directive as shown below:<br/>
   ServerAlias www.example.com
 
   Redirect permanent / https://example.com/
+# RedirectMatch permanent ^/(.*)$ https://www.example.com/$1 -- redirects recursive pages.
 </VirtualHost>
 
 <VirtualHost *:443>
